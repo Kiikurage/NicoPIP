@@ -73,7 +73,7 @@ class NicoPIPClient {
         this.outputVideo.style.opacity = '0';
         this.outputVideo.style.pointerEvents = 'none';
         this.outputVideo.controls = true;
-        this.outputVideo.addEventListener('leavePictureInPicture', this.onAfterLeavePIP);
+        this.outputVideo.addEventListener('leavepictureinpicture', this.onAfterLeavePIP);
     }
 
     static getInstance() {

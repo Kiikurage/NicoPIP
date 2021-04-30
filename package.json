@@ -8,7 +8,10 @@
     "test:watch": "npm run test -- --watch",
     "lint": "eslint -c ./.eslintrc.js 'src/**/*.{ts,js}' && prettier 'src/**/*.{ts,js}'",
     "lint:fix": "eslint -c ./.eslintrc.js 'src/**/*.{ts,js}' && prettier --write 'src/**/*.{ts,js}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pack": "zip build.zip ./build/*",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "author": {
     "name": "Kikurage",
@@ -35,14 +38,9 @@
     "webpack-cli": "^4.6.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix --max-warnings=0 --no-ignore",
       "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "eslint --fix --max-warnings=0 --no-ignore",
-      "prettier --write",
-      "tsc --noEmit"
     ],
     "*.json": "prettier --write"
   }
