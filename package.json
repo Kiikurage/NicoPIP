@@ -1,6 +1,6 @@
 {
   "name": "nico-pip",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "webpack",
     "build:watch": "npm run build -- --watch",
@@ -32,8 +32,7 @@
     "prettier": "^2.2.1",
     "typescript": "^4.2.4",
     "webpack": "^5.36.1",
-    "webpack-cli": "^4.6.0",
-    "webpack-livereload-plugin": "^3.0.1"
+    "webpack-cli": "^4.6.0"
   },
   "lint-staged": {
     "*.{js,jsx}": [

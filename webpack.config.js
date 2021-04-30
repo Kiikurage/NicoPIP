@@ -2,7 +2,6 @@
 
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
@@ -47,7 +46,6 @@ module.exports = {
                 },
             ],
         }),
-        new LiveReloadPlugin(),
         new ForkTsCheckerWebpackPlugin(),
     ],
 };
